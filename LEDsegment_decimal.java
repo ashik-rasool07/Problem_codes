@@ -27,5 +27,5 @@ public class LEDsegment_decimal {
     }
 }
 
-/*Given N, replace each digit with its 7-seg binary code (0→1111110,1→0110000,...,9→1111011), 
+/*Given N, replace each digit with its 7-seg binary code   (0→1111110,1→0110000,...,9→1111011), 
 concatenate, convert binary to decimal, and print.*/
