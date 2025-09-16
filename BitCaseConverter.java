@@ -1,4 +1,6 @@
 
+import java.util.Scanner;
+
 public class BitCaseConverter {
 
     // Applies bits to the string either from start or end
@@ -51,14 +53,17 @@ public class BitCaseConverter {
     }
 
     public static void main(String[] args) {
-        String str = "BasketBall";
-        int n = 23;
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+        int n = scanner.nextInt();
 
         String forwardResult = applyBits(str, n, false);
         String backwardResult = applyBits(str, n, true);
 
         System.out.println(forwardResult);
         System.out.println(backwardResult);
+
+        scanner.close();
     }
 }
 
