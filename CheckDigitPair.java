@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Hello {
+public class  CheckDigitPair{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();   // number of integers
@@ -18,7 +18,7 @@ public class Hello {
         }
 
         // compare pairs
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i < N-1; i++) {
             for (int j = i + 1; j < N; j++) {
                 if (Arrays.equals(digitsInNum[i], digitsInNum[j])) {
                     System.out.println(arr[i] + " " + arr[j]);
