@@ -4,28 +4,20 @@ public class samestones {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int N = sc.nextInt();       // number of stones
-        int[] stones = new int[N];  // weights of stones
+        int N = sc.nextInt();
+        int[] stones = new int[N];
+        for (int i = 0; i < N; i++) stones[i] = sc.nextInt();
 
-        for (int i = 0; i < N; i++) {
-            stones[i] = sc.nextInt();
-        }
+        int pos1 = 0, pos2 = 0; 
 
-        int pos1 = 0, pos2 = 0; // both start at stone 1 (index 0)
-
-        while (true) {
-            // print current positions
+      
+        do {
             System.out.println(stones[pos1] + " " + stones[pos2]);
+            pos1 = (pos1 + 1) % N;
+            pos2 = (pos2 + 2) % N;
+        } while (pos1 != pos2);
 
-            // stop condition: both meet again (but not at very beginning)
-            if (pos1 == pos2 && !(pos1 == 0 && pos2 == 0)) {
-                break;
-            }
-
-            // move boys in circular way
-            pos1 = (pos1 + 1) % N; // B1 jumps 1 stone
-            pos2 = (pos2 + 2) % N; // B2 jumps 2 stones
-        }
+        System.out.println(stones[pos1] + " " + stones[pos2]);
         sc.close();
     }
 }
