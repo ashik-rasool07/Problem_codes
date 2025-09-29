@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Function to print every row characters based on row number
 void printEveryRowCharacters(int R, int C, char *matrix) {
     for (int i = 0; i < R; i++) {
         for (int j = 0; j < C; j += (i + 1)) {
@@ -10,13 +9,16 @@ void printEveryRowCharacters(int R, int C, char *matrix) {
     }
 }
 
-int main() {
+int main() 
+{
     int R, C;
     scanf("%d %d", &R, &C);
 
     char matrix[R][C];
-    for (int row = 0; row < R; row++) {
-        for (int col = 0; col < C; col++) {
+    for (int row = 0; row < R; row++) 
+    {
+        for (int col = 0; col < C; col++)
+     {
             scanf(" %c", &matrix[row][col]);
         }
     }
@@ -54,5 +56,5 @@ c z c b e l u m f
 
 Output:
 f n m d h b o c r o m x u g p w a s x c u
-===============================================
+==========================================
 */
