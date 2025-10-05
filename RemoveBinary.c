@@ -25,6 +25,7 @@ int getIntegerValue(int N)
         }
         part[k] = '\0'; 
 
+        
        
         if (k >= 2)
         {
