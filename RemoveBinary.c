@@ -31,6 +31,7 @@ int getIntegerValue(int N)
         {
             int decimal = strtol(part, NULL, 2); // convert binary to decimal
 
+            
             char before[100], after[100], result[100];
 
             strncpy(before, s, i);
